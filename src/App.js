@@ -1,7 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
-// import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { Link } from "react-scroll";
 
 import About from './About'
 import Project from './Project'
@@ -12,17 +10,42 @@ import './App.css';
 function App() {
 
   return (
-
     <main className='Main'>
       <nav class="nav nav-pills nav-fill">
-        <li className="nav-item">
-          <Link smooth to='/#skills' class="text-dark"><h3>Skills</h3></Link>
+        <li className="nav-item" id="skills">
+          <Link
+            activeClass="active"
+            to="skillList"
+            spy={true}
+            offset={-70}
+            duration={500}>
+            <h3>
+              Skills
+          </h3>
+          </Link>
+        </li>
+        <li className="nav-item" id="projects">
+          <Link
+            activeClass="active"
+            to="Project"
+            spy={true}
+            offset={-70}
+            duration={500}>
+            <h3>
+              Projects
+          </h3>
+          </Link>
         </li>
         <li className="nav-item">
-          <Link smooth to='/#project' class="text-dark"><h3>Projects</h3></Link>
-        </li>
-        <li className="nav-item">
-          <Link smooth to='/#footer' class="text-dark"><h3>Contact Me</h3></Link>
+          <Link
+            activeClass="active"
+            to="Contact"
+            spy={true}
+            offset={-70}
+            duration={500}>
+            <h3>
+              Contact Me</h3>
+          </Link>
         </li>
         <li className="nav-item">
           <a class="text-dark" target="_blank" href="/Resume.pdf"><h3>Resumé</h3></a>
@@ -31,15 +54,9 @@ function App() {
 
       <div className='home'>
         <About />
-
         <Skills />
-
-
         <Project />
-
-
         <Footer />
-
       </div>
     </main>
   );

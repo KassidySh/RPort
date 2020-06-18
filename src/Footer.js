@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer (){
 return(
-    <div className='contact'>
+    <div className='contact' id="Contact">
         <ul className='links'>
             <ul><a className='text-dark' target="_blank" href="https://www.linkedin.com/in/kassidyshade/"><h4>LinkedIn</h4></a></ul>
             <ul><a className='text-dark' target="_blank" href="https://github.com/KassidySh"><h4>My Github</h4></a></ul>

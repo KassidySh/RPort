@@ -3,6 +3,7 @@ import React from 'react';
 function Skills() {
     return (
         <div className='skills'>
+            <div id="skillList"></div>
             <h2>Skills</h2>
             <div className='skills'>
                 <div>HTML</div>
