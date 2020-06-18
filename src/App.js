@@ -48,7 +48,7 @@ function App() {
           </Link>
         </li>
         <li className="nav-item">
-          <a class="text-dark" target="_blank" href="/Resume.pdf"><h3>Resumé</h3></a>
+          <a rel="noopener noreferrer" class="text-dark" target="_blank" href="/Resume.pdf"><h3>Resumé</h3></a>
         </li>
       </nav>
 
