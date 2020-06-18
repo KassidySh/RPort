@@ -1,27 +1,45 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
+// import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import About from './About'
 import Project from './Project'
+import Footer from './Footer'
+import Skills from './Skills'
 import './App.css';
 
 function App() {
+
   return (
 
     <main className='Main'>
       <nav class="nav nav-pills nav-fill">
-        <li class="nav-item">
-          <Link to='/' className="nav-link"><h3>Home</h3></Link>
-</li>
-          <li className="nav-item">
-          <Link to='/project' class="nav-link"><h3>Projects</h3></Link>
+        <li className="nav-item">
+          <Link smooth to='/#skills' class="text-dark"><h3>Skills</h3></Link>
+        </li>
+        <li className="nav-item">
+          <Link smooth to='/#project' class="text-dark"><h3>Projects</h3></Link>
+        </li>
+        <li className="nav-item">
+          <Link smooth to='/#footer' class="text-dark"><h3>Contact Me</h3></Link>
+        </li>
+        <li className="nav-item">
+          <a class="text-dark" target="_blank" href="/Resume.pdf"><h3>Resumé</h3></a>
         </li>
       </nav>
-      <div className='about'>
-        <Switch>
-          <Route exact path='/' component={About} />
-          <Route exact path='/project' component={Project} />
-        </Switch>
+
+      <div className='home'>
+        <About />
+
+        <Skills />
+
+
+        <Project />
+
+
+        <Footer />
+
       </div>
     </main>
   );
